@@ -1,0 +1,47 @@
+<link rel="stylesheet" type="text/css"
+	href="../node_modules/bootstrap/dist/css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="../css/myStyle.css" />
+<div class="container spacer">
+	<div class="panel panel-default" ng-if="mode==0">
+		<div class="panel-heading">Saisie d'un produit2</div>
+		<div class="panel-body">
+			<form>
+				<div class="form-group">
+					<label class="control-label">Désignation : </label> <input
+						class="form-control" type="text" ng-model="produit.designation">
+				</div>
+				<div class="form-group">
+					<label class="control-label">Prix : </label> <input
+						class="form-control" type="text" ng-model="produit.prix">
+				</div>
+				<div class="form-group">
+					<label class="control-label">Quantité : </label> <input
+						class="form-control" type="text" ng-model="produit.quantite">
+				</div>
+				<div>
+					<button class="btn btn-primary" ng-click="saveProduit()">Save</button>
+				</div>
+			</form>
+		</div>
+	</div>
+	<div class="panel panel-default" ng-if="mode==1">
+		<div class="panel-heading">
+			Confirmation : <a ng-click="modeNew()">New</a>
+		</div>
+		<div class="panel-body">
+			<div class="form-group">
+				<label>ID : </label> <label>{{produit.id}}</label>
+			</div>
+			<div class="form-group">
+				<label>Désignation : </label> <label>{{produit.designation}}</label>
+			</div>
+			<div class="form-group">
+				<label>Prix : </label> <label>{{produit.prix}}</label>
+			</div>
+			<div class="form-group">
+				<label>Quantité : </label> <label>{{produit.quantite}}</label>
+			</div>
+		</div>
+	</div>
+
+</div>
